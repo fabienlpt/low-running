@@ -1,3 +1,5 @@
 export default function Home() {
-  return <div className="container">test</div>;
+  return <div className="container">
+    <h1 className="font-nike">Nike</h1>
+  </div>;
 }
