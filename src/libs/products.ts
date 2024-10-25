@@ -8,7 +8,8 @@ export type Product = {
     sizes: string[],
     material: string,
     colors: string[],
-    features: string[]
+    features: string[],
+    images?: string[],
 }
 
 export type ProductFilter = {
@@ -21,5 +22,3 @@ export type ProductFilter = {
 export function getProducts() {
     return products;
 }
-
-export function filterProducts(filters)
