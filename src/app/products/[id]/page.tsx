@@ -1,5 +1,6 @@
 import { getProductById } from "@/libs/products";
-import { Heart, ShoppingCart, Star } from "lucide-react";
+import { Heart, Star } from "lucide-react";
+import Image from "next/image";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -33,7 +34,7 @@ export default async function ProductPage({ params, searchParams }: Props) {
             <div className="aspect-square relative bg-gray-100 rounded-lg overflow-hidden">
               {product.images && product.images.length > 0 ? (
                 <>
-                  <img
+                  <Image
                     src={product.images[currentImageIndex]}
                     alt={product.name}
                     className="w-full h-full object-cover"
@@ -113,7 +114,7 @@ export default async function ProductPage({ params, searchParams }: Props) {
                       currentImageIndex === index ? "ring-2 ring-black" : ""
                     }`}
                   >
-                    <img
+                    <Image
                       src={image}
                       alt={`${product.name} - vue ${index + 1}`}
                       className="w-full h-full object-cover"
