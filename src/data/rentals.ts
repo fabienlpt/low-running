@@ -1,13 +1,4 @@
-export type Rental = {
-  id: number;
-  productId: number;
-  userId: number;
-  size: string;
-  color: string;
-  startDate: string;
-  endDate: string;
-  isActive: boolean;
-};
+import { Rental } from "@/libs/rentals";
 
 export const rentals: Rental[] = [
   {

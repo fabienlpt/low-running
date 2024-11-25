@@ -9,6 +9,7 @@ export type Product = {
   material: string;
   colors: string[];
   features: string[];
+  maxKilometers: number;
   images?: string[];
 };
 

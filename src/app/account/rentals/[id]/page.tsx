@@ -22,6 +22,9 @@ export default async function RentalPage({ params }: Props) {
     notFound();
   }
 
+  const usedKilometers = Math.floor(Math.random() * 400);
+  const remainingKilometers = rental.product.maxKilometers - usedKilometers;
+
   return (
     <main className="relative">
       <div className="mx-auto max-w-2xl px-4 py-12">
@@ -60,6 +63,11 @@ export default async function RentalPage({ params }: Props) {
             <p>Couleur : {rental.color}</p>
             <p className="font-medium text-gray-900 mt-2">
               {rental.product.price}€/mois
+            </p>
+          </div>
+          <div className="mt-2 text-sm text-gray-500">
+            <p className="text-center">
+              Kilomètres restants : {remainingKilometers} km
             </p>
           </div>
         </div>

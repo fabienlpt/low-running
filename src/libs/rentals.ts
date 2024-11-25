@@ -1,5 +1,16 @@
-import { rentals, Rental } from "@/data/rentals";
+import { rentals } from "@/data/rentals";
 import { getProducts, Product } from "@/libs/products";
+
+export type Rental = {
+  id: number;
+  productId: number;
+  userId: number;
+  size: string;
+  color: string;
+  startDate: string;
+  endDate: string;
+  isActive: boolean;
+};
 
 export type RentalWithProduct = Rental & {
   product: Product;
