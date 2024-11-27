@@ -4,12 +4,14 @@ import {
   getInitials,
 } from "@/libs/account";
 import { getActiveRentals } from "@/libs/rentals";
-import { Settings, Package, Box, ChevronRight } from "lucide-react";
+import { getActiveOrders } from "@/libs/orders";
+import { Settings, Package, Clock, ChevronRight } from "lucide-react";
 import Link from "next/link";
 
 export default async function AccountPage() {
   const account = await getAccountById(1);
   const activeRentals = await getActiveRentals(1);
+  const activeOrders = await getActiveOrders(1);
 
   if (!account) {
     return null;
@@ -46,7 +48,7 @@ export default async function AccountPage() {
           >
             <div className="mb-4">
               <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-3">
-                <Box className="w-6 h-6 text-green-600" />
+                <Clock className="w-6 h-6 text-green-600" />
               </div>
               <h3 className="font-semibold text-lg">Locations en cours</h3>
               <p className="text-3xl font-bold mt-2">{activeRentals.length}</p>
@@ -66,7 +68,7 @@ export default async function AccountPage() {
                 <Package className="w-6 h-6 text-blue-600" />
               </div>
               <h3 className="font-semibold text-lg">Commandes</h3>
-              <p className="text-3xl font-bold mt-2">0</p>
+              <p className="text-3xl font-bold mt-2">{activeOrders.length}</p>
             </div>
             <div className="mt-auto flex items-center text-sm font-medium text-gray-600 group-hover:text-black">
               Voir l&apos;historique
