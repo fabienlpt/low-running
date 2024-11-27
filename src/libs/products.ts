@@ -20,12 +20,14 @@ export type ProductFilter = {
   materials: string[];
 };
 
+export type SortBy = "priceAsc" | "priceDesc" | "nameAsc" | "nameDesc";
+
 export function getProducts() {
   return products;
 }
 
-export function filterProducts(filters: ProductFilter) {
-    return products.filter(product => {
+export function filterProducts(filters: ProductFilter, sortBy: SortBy = "priceAsc") {
+    const filteredProducts =  products.filter(product => {
         if (filters.categories.length > 0 && !filters.categories.includes(product.category)) {
             return false;
         }
@@ -44,6 +46,17 @@ export function filterProducts(filters: ProductFilter) {
 
         return true;
     });
+
+    switch (sortBy) {
+        case "priceAsc":
+            return filteredProducts.sort((a, b) => a.price - b.price);
+        case "priceDesc":
+            return filteredProducts.sort((a, b) => b.price - a.price);
+        case "nameAsc":
+            return filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+        case "nameDesc":
+            return filteredProducts.sort((a, b) => b.name.localeCompare(a.name));
+    }
 }
 
 export function getCategories() {
