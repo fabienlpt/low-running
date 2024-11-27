@@ -1,0 +1,45 @@
+import { Order } from "@/libs/orders";
+
+export const orders: Order[] = [
+  {
+    id: 1,
+    userId: 1,
+    productId: 1,
+    size: "40",
+    color: "Black",
+    status: "delivered",
+    orderDate: "2024-01-15",
+    deliveredDate: "2024-01-20",
+  },
+  {
+    id: 2,
+    userId: 1,
+    productId: 2,
+    size: "41",
+    color: "Blue",
+    status: "delivered",
+    orderDate: "2024-02-15",
+    deliveredDate: "2024-02-20",
+  },
+  {
+    id: 3,
+    userId: 1,
+    productId: 3,
+    size: "38",
+    color: "Gray",
+    status: "delivered",
+    orderDate: "2024-03-10",
+    deliveredDate: "2024-03-15",
+  },
+  {
+    id: 4,
+    userId: 1,
+    productId: 4,
+    size: "40",
+    color: "Black",
+    status: "shipped",
+    trackingNumber: "LR123456789FR",
+    orderDate: "2024-03-25",
+    estimatedDeliveryDate: "2024-03-30",
+  },
+];

@@ -1,26 +1,27 @@
-import {products} from "@/data/products";
+import { products } from "@/data/products";
 
 export type Product = {
-    id: number,
-    category: string,
-    name: string,
-    price: number,
-    sizes: string[],
-    material: string,
-    colors: string[],
-    features: string[],
-    images?: string[],
-}
+  id: number;
+  category: string;
+  name: string;
+  price: number;
+  sizes: string[];
+  material: string;
+  colors: string[];
+  features: string[];
+  maxKilometers: number;
+  images?: string[];
+};
 
 export type ProductFilter = {
-    categories: string[],
-    sizes: string[],
-    colors: string[],
-    materials: string[],
-}
+  categories: string[];
+  sizes: string[];
+  colors: string[];
+  materials: string[];
+};
 
 export function getProducts() {
-    return products;
+  return products;
 }
 
 export function filterProducts(filters: ProductFilter) {
@@ -59,4 +60,8 @@ export function getColors() {
 
 export function getMaterials() {
     return Array.from(new Set(products.map(product => product.material)));
+}
+
+export function getProductById(id: number) {
+  return products.find((p) => p.id === id) || null;
 }
