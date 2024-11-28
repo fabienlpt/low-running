@@ -85,7 +85,7 @@ export default function HomePage() {
                 Voir les modèles
               </Link>
             </div>
-            <div className="relative h-[400px]">
+            <div className="relative h-[400px] md:h-[450px] lg:h-[600px]">
               <Image
                 src="/shoes-collection.jpg"
                 alt="Collection de chaussures"
