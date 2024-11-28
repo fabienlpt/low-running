@@ -7,8 +7,8 @@ import {redirect} from "next/navigation";
 import {getProductById} from "@/libs/products";
 import Image from "next/image";
 
-export default function Page({store}) {
-    const {cartItems, removeFromCart, clearCart} = useCart();
+export default function Page() {
+    const {cartItems, clearCart} = useCart();
     const [selectedStore, setSelectedStore] = useState<Store | null>(null);
     const [error, setError] = useState<string | null>(null);
 
