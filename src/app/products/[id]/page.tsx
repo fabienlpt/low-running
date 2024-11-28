@@ -38,6 +38,8 @@ export default async function ProductPage({ params, searchParams }: Props) {
                     src={product.images[currentImageIndex]}
                     alt={product.name}
                     className="w-full h-full object-cover"
+                    width={800}
+                    height={800}
                   />
                   {product.images.length > 1 && (
                     <>
