@@ -1,5 +1,6 @@
+import { AddToCartForm } from "@/components/addToCardForm";
 import { getProductById } from "@/libs/products";
-import { Heart, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import Image from "next/image";
 
 type Props = {
@@ -8,7 +9,6 @@ type Props = {
 };
 
 export default async function ProductPage({ params, searchParams }: Props) {
-  // Attendre la résolution des deux promesses
   const [{ id }, resolvedSearchParams] = await Promise.all([
     params,
     searchParams,
@@ -29,7 +29,6 @@ export default async function ProductPage({ params, searchParams }: Props) {
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Gallery Section */}
           <div className="relative">
             <div className="aspect-square relative bg-gray-100 rounded-lg overflow-hidden">
               {product.images && product.images.length > 0 ? (
@@ -103,7 +102,6 @@ export default async function ProductPage({ params, searchParams }: Props) {
               )}
             </div>
 
-            {/* Thumbnails */}
             {product.images && product.images.length > 1 && (
               <div className="mt-4 flex space-x-4 overflow-x-auto">
                 {product.images.map((image, index) => (
@@ -127,7 +125,6 @@ export default async function ProductPage({ params, searchParams }: Props) {
             )}
           </div>
 
-          {/* Product Info Section */}
           <div className="space-y-8 lg:max-w-[400px]">
             <div>
               <h1 className="text-3xl font-bold mb-2 font-nike">
@@ -148,7 +145,6 @@ export default async function ProductPage({ params, searchParams }: Props) {
               <p className="text-2xl font-bold">{product.price}€</p>
             </div>
 
-            {/* Color Selection */}
             <div>
               <h2 className="text-lg font-semibold mb-4">
                 Couleurs disponibles
@@ -174,7 +170,6 @@ export default async function ProductPage({ params, searchParams }: Props) {
               </div>
             </div>
 
-            {/* Size Selection */}
             <div>
               <h2 className="text-lg font-semibold mb-4">
                 Tailles disponibles
@@ -200,13 +195,11 @@ export default async function ProductPage({ params, searchParams }: Props) {
               </div>
             </div>
 
-            {/* Material */}
             <div>
               <h2 className="text-lg font-semibold mb-2">Matériaux</h2>
               <p className="text-gray-600">{product.material}</p>
             </div>
 
-            {/* Features */}
             <div>
               <h2 className="text-lg font-semibold mb-4">Caractéristiques</h2>
               <ul className="list-disc list-inside space-y-2">
@@ -218,29 +211,11 @@ export default async function ProductPage({ params, searchParams }: Props) {
               </ul>
             </div>
 
-            {/* Add to Cart Section */}
-            <form
-              action="/api/cart"
-              method="POST"
-              className="space-y-4 pt-6 w-full"
-            >
-              <input type="hidden" name="productId" value={product.id} />
-              <input type="hidden" name="size" value={selectedSize} />
-              <input type="hidden" name="color" value={selectedColor} />
-              <button
-                type="submit"
-                className="flex-1 bg-black text-white py-4 rounded-[30px] hover:bg-opacity-50 flex items-center justify-center space-x-2 w-full"
-              >
-                <span>Ajouter au panier</span>
-              </button>
-              <button
-                type="button"
-                className="p-4 border border-gray-200 rounded-[30px] hover:border-black flex items-center justify-center space-x-2 w-full"
-              >
-                <span>Ajouter aux favoris</span>
-                <Heart className="w-6 h-6" />
-              </button>
-            </form>
+            <AddToCartForm
+              productId={product.id}
+              selectedSize={selectedSize}
+              selectedColor={selectedColor}
+            />
           </div>
         </div>
       </div>
