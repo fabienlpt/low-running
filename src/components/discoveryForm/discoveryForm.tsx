@@ -151,18 +151,18 @@ export default function DiscoveryForm({
                         </div>
                     </Question>
                     <Question id="budget" disabled={answers.frequency === undefined}>
-                        <h2 className='text-2xl font-bold'>Quel est votre budget ?</h2>
+                        <h2 className='text-2xl font-bold'>Quel est votre budget ? (par mois)</h2>
                         <p className='text-gray-500 mt-2'>Pour vous proposer les meilleures options dans votre gamme de prix</p>
                         <div className='flex flex-col gap-2 mt-8'>
                             <AnswerButton
                                 clickHandler={() => setAnswers({ ...answers, budget: 'less_100' })}
-                                selected={answers.budget === 'less_100'}>Moins de 100€</AnswerButton>
+                                selected={answers.budget === 'less_100'}>Moins de 10€</AnswerButton>
                             <AnswerButton
                                 clickHandler={() => setAnswers({ ...answers, budget: '100_200' })}
-                                selected={answers.budget === '100_200'}>100€ - 200€</AnswerButton>
+                                selected={answers.budget === '100_200'}>10€ - 20€</AnswerButton>
                             <AnswerButton
                                 clickHandler={() => setAnswers({ ...answers, budget: 'more_200' })}
-                                selected={answers.budget === 'more_200'}>Plus de 200€</AnswerButton>
+                                selected={answers.budget === 'more_200'}>Plus de 20€</AnswerButton>
                         </div>
                     </Question>
                     <Question id="goal" disabled={answers.budget === undefined}>
