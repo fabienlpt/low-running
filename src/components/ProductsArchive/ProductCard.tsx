@@ -28,7 +28,7 @@ export default function ProductCard({ product }: { product: Product }) {
             <h2 className="text-2xl font-bold text-gray-900">{product.name}</h2>
           </div>
           <div className="text-2xl font-bold text-gray-900">
-            ${product.price.toFixed(2)}
+            {product.price.toFixed(2)}€/mois
           </div>
         </div>
         <div className="space-y-">

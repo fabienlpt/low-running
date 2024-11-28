@@ -142,7 +142,7 @@ export default async function ProductPage({ params, searchParams }: Props) {
                 </div>
                 <span className="ml-2 text-gray-600">(121 avis)</span>
               </div>
-              <p className="text-2xl font-bold">{product.price}€</p>
+              <p className="text-2xl font-bold">{product.price}€/mois</p>
             </div>
 
             <div>

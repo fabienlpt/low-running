@@ -4,7 +4,7 @@ export const products: Product[] = [
     id: 1,
     category: "Running",
     name: "UltraRun 3000",
-    price: 99.99,
+    price: 8.33,  // 99.99/12
     sizes: ["38", "39", "40", "41"],
     material: "Mesh",
     colors: ["Red", "Black"],
@@ -16,7 +16,7 @@ export const products: Product[] = [
     id: 2,
     category: "Running",
     name: "Speedster Pro",
-    price: 129.99,
+    price: 10.83,  // 129.99/12
     sizes: ["39", "40", "41", "42"],
     material: "Synthetic",
     colors: ["Blue", "White"],
@@ -28,7 +28,7 @@ export const products: Product[] = [
     id: 3,
     category: "Running",
     name: "FlyLight",
-    price: 89.99,
+    price: 7.50,  // 89.99/12
     sizes: ["36", "37", "38", "39"],
     material: "Mesh",
     colors: ["Gray", "Pink"],
@@ -40,7 +40,7 @@ export const products: Product[] = [
     id: 4,
     category: "Marathon",
     name: "Marathon Elite",
-    price: 150.0,
+    price: 12.50,  // 150.0/12
     sizes: ["38", "39", "40", "42"],
     material: "Mesh",
     colors: ["Black", "Orange"],
@@ -52,7 +52,7 @@ export const products: Product[] = [
     id: 5,
     category: "Marathon",
     name: "Endurance 500",
-    price: 175.0,
+    price: 14.58,  // 175.0/12
     sizes: ["39", "40", "41"],
     material: "Synthetic",
     colors: ["Green"],
@@ -64,7 +64,7 @@ export const products: Product[] = [
     id: 6,
     category: "Marathon",
     name: "SpeedPulse",
-    price: 160.0,
+    price: 13.33,  // 160.0/12
     sizes: ["38", "39"],
     material: "Textile",
     colors: ["Red"],
@@ -76,7 +76,7 @@ export const products: Product[] = [
     id: 7,
     category: "Trail",
     name: "Trail Blazer",
-    price: 110.5,
+    price: 9.21,  // 110.5/12
     sizes: ["38", "39", "40"],
     material: "Leather",
     colors: ["Brown"],
@@ -88,7 +88,7 @@ export const products: Product[] = [
     id: 8,
     category: "Trail",
     name: "Mountain Master",
-    price: 140.0,
+    price: 11.67,  // 140.0/12
     sizes: ["40", "41"],
     material: "Synthetic",
     colors: ["Gray"],
@@ -100,7 +100,7 @@ export const products: Product[] = [
     id: 9,
     category: "Trail",
     name: "Gravel X",
-    price: 115.0,
+    price: 9.58,  // 115.0/12
     sizes: ["39", "40", "41"],
     material: "Leather",
     colors: ["Olive"],
@@ -112,7 +112,7 @@ export const products: Product[] = [
     id: 10,
     category: "Trail",
     name: "Alpine Trekker",
-    price: 155.0,
+    price: 12.92,  // 155.0/12
     sizes: ["38", "39"],
     material: "Leather",
     colors: ["Green"],
@@ -124,7 +124,7 @@ export const products: Product[] = [
     id: 11,
     category: "Fitness",
     name: "Gym Flex",
-    price: 85.0,
+    price: 7.08,  // 85.0/12
     sizes: ["37", "38", "39"],
     material: "Mesh",
     colors: ["Pink"],
@@ -136,7 +136,7 @@ export const products: Product[] = [
     id: 12,
     category: "Fitness",
     name: "LiftMaster",
-    price: 120.0,
+    price: 10.00,  // 120.0/12
     sizes: ["39", "40", "41"],
     material: "Leather",
     colors: ["Black"],
@@ -148,7 +148,7 @@ export const products: Product[] = [
     id: 13,
     category: "Fitness",
     name: "JumpForce",
-    price: 90.0,
+    price: 7.50,  // 90.0/12
     sizes: ["36", "37", "38"],
     material: "Synthetic",
     colors: ["Yellow"],
@@ -160,7 +160,7 @@ export const products: Product[] = [
     id: 14,
     category: "Fitness",
     name: "CardioPro",
-    price: 95.0,
+    price: 7.92,  // 95.0/12
     sizes: ["37", "38", "39"],
     material: "Textile",
     colors: ["Red"],
@@ -172,7 +172,7 @@ export const products: Product[] = [
     id: 15,
     category: "Running",
     name: "RapidRun",
-    price: 102.99,
+    price: 8.58,  // 102.99/12
     sizes: ["40", "41", "42"],
     material: "Mesh",
     colors: ["Black"],
@@ -184,7 +184,7 @@ export const products: Product[] = [
     id: 16,
     category: "Marathon",
     name: "Marathoner",
-    price: 145.0,
+    price: 12.08,  // 145.0/12
     sizes: ["40", "41", "42"],
     material: "Textile",
     colors: ["Blue"],
@@ -196,7 +196,7 @@ export const products: Product[] = [
     id: 17,
     category: "Trail",
     name: "ForestHiker",
-    price: 130.0,
+    price: 10.83,  // 130.0/12
     sizes: ["40", "41", "42"],
     material: "Synthetic",
     colors: ["Brown"],
@@ -208,7 +208,7 @@ export const products: Product[] = [
     id: 18,
     category: "Fitness",
     name: "FlexiJump",
-    price: 99.0,
+    price: 8.25,  // 99.0/12
     sizes: ["40", "41"],
     material: "Mesh",
     colors: ["Blue"],
@@ -220,7 +220,7 @@ export const products: Product[] = [
     id: 19,
     category: "Running",
     name: "UltraSpeed",
-    price: 109.99,
+    price: 9.17,  // 109.99/12
     sizes: ["42", "43"],
     material: "Mesh",
     colors: ["Red"],
@@ -232,7 +232,7 @@ export const products: Product[] = [
     id: 20,
     category: "Trail",
     name: "RockyPath",
-    price: 133.0,
+    price: 11.08,  // 133.0/12
     sizes: ["41", "42", "43"],
     material: "Synthetic",
     colors: ["Gray"],

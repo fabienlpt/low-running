@@ -83,7 +83,7 @@ export default function CartPage() {
                     <p className="text-sm text-gray-500">
                       Taille: {item.size} • Couleur: {item.color}
                     </p>
-                    <p className="mt-1 font-medium">{item.product.price}€</p>
+                    <p className="mt-1 font-medium">{item.product.price}€/mois</p>
                   </div>
 
                   <button
@@ -99,7 +99,7 @@ export default function CartPage() {
             <div className="bg-white rounded-lg shadow-sm p-6">
               <div className="flex justify-between mb-4">
                 <span>Total</span>
-                <span className="font-medium">{total.toFixed(2)}€</span>
+                <span className="font-medium">{total.toFixed(2)}€/mois sur 12 mois.</span>
               </div>
 
               <button
