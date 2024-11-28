@@ -1,33 +1,33 @@
 import { products } from "@/data/products";
 
 export type Product = {
-  id: number;
-  category: string;
-  name: string;
-  price: number;
-  sizes: string[];
-  material: string;
-  colors: string[];
-  features: string[];
-  maxKilometers: number;
-  images?: string[];
+    id: number;
+    category: string;
+    name: string;
+    price: number;
+    sizes: string[];
+    material: string;
+    colors: string[];
+    features: string[];
+    maxKilometers: number;
+    images?: string[];
 };
 
 export type ProductFilter = {
-  categories: string[];
-  sizes: string[];
-  colors: string[];
-  materials: string[];
+    categories: string[];
+    sizes: string[];
+    colors: string[];
+    materials: string[];
 };
 
 export type SortBy = "priceAsc" | "priceDesc" | "nameAsc" | "nameDesc";
 
 export function getProducts() {
-  return products;
+    return products;
 }
 
 export function filterProducts(filters: ProductFilter, sortBy: SortBy = "priceAsc") {
-    const filteredProducts =  products.filter(product => {
+    const filteredProducts = products.filter(product => {
         if (filters.categories.length > 0 && !filters.categories.includes(product.category)) {
             return false;
         }
@@ -76,5 +76,18 @@ export function getMaterials() {
 }
 
 export function getProductById(id: number) {
-  return products.find((p) => p.id === id) || null;
+    return products.find((p) => p.id === id) || null;
 }
+
+export function getProductsMaxPrice() {
+    return products.reduce((max, product) => Math.max(max, product.price), 0);
+}
+
+export function getProductsMinPrice() {
+    return products.reduce((min, product) => Math.min(min, product.price), Infinity);
+}
+
+export function getRandomProducts(count: number) {
+    return products.sort(() => Math.random() - 0.5).slice(0, count);
+}
+
