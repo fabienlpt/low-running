@@ -102,12 +102,11 @@ export default function CartPage() {
                 <span className="font-medium">{total.toFixed(2)}€/mois sur 12 mois.</span>
               </div>
 
-              <button
-                onClick={() => clearCart()}
-                className="w-full bg-black text-white py-4 rounded-[30px] hover:bg-opacity-80 mb-4"
+              <a href={'/checkout'}
+                className="w-full bg-black text-white py-4 rounded-[30px] hover:bg-opacity-80 mb-4 block text-center"
               >
                 Passer la commande
-              </button>
+              </a>
 
               <Link
                 href="/products"
