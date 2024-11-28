@@ -1,11 +1,14 @@
 "use client";
-import StoreLocator from "@/components/store-locator";
+
 import {Store} from "@/libs/stores";
 import {useEffect, useState} from "react";
 import {CartItem, useCart} from "@/hooks/useCart";
 import {redirect} from "next/navigation";
 import {getProductById} from "@/libs/products";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const StoreLocator = dynamic(() => import("@/components/store-locator"), { ssr: false });
 
 export default function Page() {
     const {cartItems, clearCart} = useCart();

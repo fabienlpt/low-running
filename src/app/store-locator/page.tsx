@@ -1,6 +1,8 @@
 "use client"
 
-import StoreLocator from "@/components/store-locator";
+import dynamic from "next/dynamic";
+
+const StoreLocator = dynamic(() => import("@/components/store-locator"), { ssr: false });
 
 export default function Page() {
     return (

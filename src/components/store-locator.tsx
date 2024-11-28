@@ -1,7 +1,9 @@
+"use client";
+
 import getStores, {Store} from "@/libs/stores";
 import {MapContainer, Marker, TileLayer, useMap} from "react-leaflet";
 import {useEffect, useState} from "react";
-import L from "leaflet";
+import L, {LatLngExpression} from "leaflet";
 import 'leaflet/dist/leaflet.css';
 
 type StoreLocatorProps = {
@@ -9,16 +11,17 @@ type StoreLocatorProps = {
 }
 export default function StoreLocator({onSelectStore}: StoreLocatorProps) {
     const stores = getStores();
-    const center = [stores[0].latitude, stores[0].longitude];
+    const center = [stores[0].latitude, stores[0].longitude] as LatLngExpression;
     const [selectedStore, setSelectedStore] = useState<Store | null>(null);
 
-    function ChangeView({ coords }) {
+    function ChangeView({ coords }: { coords: LatLngExpression }) {
         const map = useMap();
         map.setView(coords, 12);
         return null;
     }
 
     const fixLeafletIcons = () => {
+        // @ts-expect-error fix for leaflet icons
         delete (L.Icon.Default.prototype)._getIconUrl;
         L.Icon.Default.mergeOptions({
             iconRetinaUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png",
