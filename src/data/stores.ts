@@ -9,7 +9,7 @@ export const stores: Store[] = [
         postalCode: "75008",
         latitude: 48.8718,
         longitude: 2.3033,
-        openingHours: "Monday-Saturday: 10:00-20:00, Sunday: 11:00-19:00"
+        openingHours: "Lundi-Samedi: 10:00-20:00, Dimanche: 11:00-19:00"
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ export const stores: Store[] = [
         postalCode: "75001",
         latitude: 48.8616,
         longitude: 2.3476,
-        openingHours: "Monday-Saturday: 10:00-20:00, Sunday: 11:00-19:00"
+        openingHours: "Lundi-Samedi: 10:00-20:00, Dimanche: 11:00-19:00"
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ export const stores: Store[] = [
         postalCode: "69003",
         latitude: 45.7601,
         longitude: 4.8599,
-        openingHours: "Monday-Saturday: 10:00-20:00, Sunday: Closed"
+        openingHours: "Lundi-Samedi: 10:00-20:00, Dimanche: Fermé"
     },
     {
         id: 4,
@@ -39,7 +39,7 @@ export const stores: Store[] = [
         postalCode: "13002",
         latitude: 43.3085,
         longitude: 5.3672,
-        openingHours: "Monday-Saturday: 10:00-20:00, Sunday: 11:00-19:00"
+        openingHours: "Lundi-Samedi: 10:00-20:00, Dimanche: 11:00-19:00"
     },
     {
         id: 5,
@@ -49,7 +49,7 @@ export const stores: Store[] = [
         postalCode: "31000",
         latitude: 43.6045,
         longitude: 1.4442,
-        openingHours: "Monday-Saturday: 10:00-19:30, Sunday: Closed"
+        openingHours: "Lundi-Samedi: 10:00-19:30, Dimanche: Fermé"
     },
     {
         id: 6,
@@ -59,7 +59,7 @@ export const stores: Store[] = [
         postalCode: "06000",
         latitude: 43.7009,
         longitude: 7.2683,
-        openingHours: "Monday-Saturday: 10:00-19:30, Sunday: Closed"
+        openingHours: "Lundi-Samedi: 10:00-19:30, Dimanche: Fermé"
     },
     {
         id: 7,
@@ -69,7 +69,7 @@ export const stores: Store[] = [
         postalCode: "59777",
         latitude: 50.638,
         longitude: 3.075,
-        openingHours: "Monday-Saturday: 10:00-20:00, Sunday: Closed"
+        openingHours: "Lundi-Samedi: 10:00-20:00, Dimanche: Fermé"
     },
     {
         id: 8,
@@ -79,7 +79,7 @@ export const stores: Store[] = [
         postalCode: "33000",
         latitude: 44.8397,
         longitude: -0.5748,
-        openingHours: "Monday-Saturday: 10:00-19:30, Sunday: Closed"
+        openingHours: "Lundi-Samedi: 10:00-19:30, Dimanche: Fermé"
     },
     {
         id: 9,
@@ -89,7 +89,7 @@ export const stores: Store[] = [
         postalCode: "67000",
         latitude: 48.5868,
         longitude: 7.7458,
-        openingHours: "Monday-Saturday: 10:00-19:30, Sunday: Closed"
+        openingHours: "Lundi-Samedi: 10:00-19:30, Dimanche: Fermé"
     },
     {
         id: 10,
@@ -99,6 +99,6 @@ export const stores: Store[] = [
         postalCode: "34000",
         latitude: 43.6047,
         longitude: 3.9127,
-        openingHours: "Monday-Saturday: 10:00-20:00, Sunday: Closed"
+        openingHours: "Lundi-Samedi: 10:00-20:00, Dimanche: Fermé"
     }
 ];

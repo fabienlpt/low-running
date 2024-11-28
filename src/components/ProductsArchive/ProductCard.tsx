@@ -46,7 +46,7 @@ export default function ProductCard({ product }: { product: Product }) {
           href={`/products/${product.id}`}
           className="w-full block text-center bg-black text-white font-bold py-2 px-4 rounded transition duration-300"
         >
-          View Product
+          Voir le produit
         </Link>
       </div>
     </div>
