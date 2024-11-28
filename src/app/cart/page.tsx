@@ -15,7 +15,7 @@ type ProductWithDetails = {
 };
 
 export default function CartPage() {
-  const { cartItems, removeFromCart, clearCart } = useCart();
+  const { cartItems, removeFromCart } = useCart();
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
