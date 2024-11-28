@@ -10,6 +10,7 @@ export const products: Product[] = [
     colors: ["Red", "Black"],
     features: ["Lightweight", "Breathable"],
     maxKilometers: 500,
+    images: ["/images/nike1.png"],
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ export const products: Product[] = [
     colors: ["Blue", "White"],
     features: ["Cushioning", "Lightweight"],
     maxKilometers: 500,
+    images: ["/images/nike2.png"],
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ export const products: Product[] = [
     colors: ["Gray", "Pink"],
     features: ["Flexible"],
     maxKilometers: 500,
+    images: ["/images/nike3.png"],
   },
   {
     id: 4,
@@ -43,6 +46,7 @@ export const products: Product[] = [
     colors: ["Black", "Orange"],
     features: ["Comfort", "Breathable"],
     maxKilometers: 500,
+    images: ["/images/nike4.png"],
   },
   {
     id: 5,
@@ -54,6 +58,7 @@ export const products: Product[] = [
     colors: ["Green"],
     features: ["Non-slip"],
     maxKilometers: 500,
+    images: ["/images/nike5.png"],
   },
   {
     id: 6,
@@ -65,6 +70,7 @@ export const products: Product[] = [
     colors: ["Red"],
     features: ["Ultra-light"],
     maxKilometers: 500,
+    images: ["/images/nike6.jpg"],
   },
   {
     id: 7,
@@ -76,6 +82,7 @@ export const products: Product[] = [
     colors: ["Brown"],
     features: ["Waterproof"],
     maxKilometers: 500,
+    images: ["/images/nike7.jpg"],
   },
   {
     id: 8,
@@ -87,6 +94,7 @@ export const products: Product[] = [
     colors: ["Gray"],
     features: ["Shock absorption"],
     maxKilometers: 500,
+    images: ["/images/nike8.png"],
   },
   {
     id: 9,
@@ -98,6 +106,7 @@ export const products: Product[] = [
     colors: ["Olive"],
     features: ["Optimal support"],
     maxKilometers: 500,
+    images: ["/images/nike9.png"],
   },
   {
     id: 10,
@@ -109,6 +118,7 @@ export const products: Product[] = [
     colors: ["Green"],
     features: ["Additional support"],
     maxKilometers: 500,
+    images: ["/images/nike10.png"],
   },
   {
     id: 11,
