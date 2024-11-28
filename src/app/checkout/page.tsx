@@ -34,7 +34,7 @@ export default function Page() {
                     <p className={"text-sm text-gray-400"}>Taille : {cartItem.size}</p>
                     <p className={"text-sm text-gray-400"}>Couleur : {cartItem.color}</p>
                 </div>
-                {product.images.length > 0 && (
+                {product.images && product.images.length > 0 && (
                     <Image src={product.images[0]} alt={product.name} className={"h-full aspect-square object-cover"} width={100} height={100}/>
                 )}
             </li>
