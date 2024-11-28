@@ -13,9 +13,9 @@ type Account = {
 const accounts: Account[] = [
   {
     id: 1,
-    email: "marius.carpenito@gmail.com",
-    firstName: "Marius",
-    lastName: "Carpenito",
+    email: "john.doe@gmail.com",
+    firstName: "John",
+    lastName: "Doe",
     address: "123 rue Example",
     city: "Paris",
     postalCode: "75000",
