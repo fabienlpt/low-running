@@ -9,18 +9,31 @@ type Listener = () => void;
 class CartStore {
   private items: CartItem[] = [];
   private listeners: Set<Listener> = new Set();
+  private initialized: boolean = false;
 
   constructor() {
-    // Initialiser le panier depuis sessionStorage
+    this.init();
+  }
+
+  private init() {
+    if (this.initialized) return;
+
     if (typeof window !== "undefined") {
       const stored = sessionStorage.getItem("cart");
       if (stored) {
-        this.items = JSON.parse(stored);
+        try {
+          this.items = JSON.parse(stored);
+        } catch (e) {
+          this.items = [];
+          console.error(e);
+        }
       }
+      this.initialized = true;
     }
   }
 
   subscribe(listener: Listener) {
+    this.init();
     this.listeners.add(listener);
     return () => {
       this.listeners.delete(listener);
@@ -35,20 +48,24 @@ class CartStore {
   }
 
   getItems() {
+    this.init();
     return this.items;
   }
 
   addItem(item: CartItem) {
+    this.init();
     this.items = [...this.items, item];
     this.notify();
   }
 
   removeItem(index: number) {
+    this.init();
     this.items = this.items.filter((_, i) => i !== index);
     this.notify();
   }
 
   clearCart() {
+    this.init();
     this.items = [];
     this.notify();
     if (typeof window !== "undefined") {
@@ -57,6 +74,7 @@ class CartStore {
   }
 
   get count() {
+    this.init();
     return this.items.length;
   }
 }

@@ -10,15 +10,29 @@ export type CartItem = {
 };
 
 export function useCart() {
+  const [mounted, setMounted] = useState(false);
   const [cartItems, setCartItems] = useState(cartStore.getItems());
   const [itemCount, setItemCount] = useState(cartStore.count);
 
   useEffect(() => {
-    return cartStore.subscribe(() => {
+    setMounted(true);
+    const unsubscribe = cartStore.subscribe(() => {
       setCartItems(cartStore.getItems());
       setItemCount(cartStore.count);
     });
+
+    return unsubscribe;
   }, []);
+
+  if (!mounted) {
+    return {
+      cartItems: [],
+      itemCount: 0,
+      addToCart: () => {},
+      removeFromCart: () => {},
+      clearCart: () => {},
+    };
+  }
 
   return {
     cartItems,
