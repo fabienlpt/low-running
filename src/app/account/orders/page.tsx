@@ -32,7 +32,7 @@ export default async function OrdersPage() {
                   <div className="flex items-start gap-6">
                     <div className="w-24 h-24 relative rounded-lg overflow-hidden bg-gray-100">
                       {order.product.images &&
-                      order.product.images.length > 0 ? (
+                        order.product.images.length > 0 ? (
                         <Image
                           src={order.product.images[0]}
                           alt={order.product.name}
