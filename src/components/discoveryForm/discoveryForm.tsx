@@ -17,6 +17,7 @@ export default function DiscoveryForm({
     const galleryRef = useRef<HTMLDivElement>(null);
     const wrapperRef = useRef<HTMLDivElement>(null);
     const formRef = useRef<HTMLDivElement>(null);
+    const mobileFormRef = useRef<HTMLDivElement>(null);
     const [isMobile, setIsMobile] = useState<boolean | null>(false);
     const [answers, setAnswers] = useState<{ [key: string]: string }>({});
     const [loading, setLoading] = useState<boolean>(false);
@@ -38,7 +39,6 @@ export default function DiscoveryForm({
                 start: "top 36px",
                 end: "bottom bottom",
                 pin: galleryRef.current,
-                markers: true,
             })
 
         });
@@ -58,11 +58,19 @@ export default function DiscoveryForm({
     }, []);
 
     useEffect(() => {
-        if (formRef.current) {
-            const questions = formRef.current.querySelectorAll('div.question');
+        if (formRef.current || mobileFormRef.current) {
+            let questions: HTMLElement[] = [];
+
+            if (isMobile && mobileFormRef.current) {
+                questions = Array.from(mobileFormRef.current.querySelectorAll('div.question'));
+            } else if (formRef.current) {
+                questions = Array.from(formRef.current.querySelectorAll('div.question'));
+            }
+
             const images = galleryRef.current?.querySelectorAll('img');
 
-            const currentQuestion = Array.from(questions).findIndex(question => !answers[question.id]);
+
+            const currentQuestion = questions.findIndex(question => !answers[question.id]);
             if (currentQuestion > -1) {
                 if (images && images.length > 0) {
                     images.forEach(image => {
@@ -186,7 +194,7 @@ export default function DiscoveryForm({
                     </button>
                 </div>
             </div>
-            <div className={'max-w-7xl w-full mx-auto flex items-center justify-center flex-col gap-8' + (isMobile ? '' : ' hidden')}>
+            <div className={'max-w-7xl w-full mx-auto flex items-center justify-center flex-col gap-8' + (isMobile ? '' : ' hidden')} ref={mobileFormRef}>
                 <div className='flex flex-col items-center gap-8 w-full'>
                     <Image src="/home-banner.jpg" alt="" width={1920} height={1080} className='w-full max-h-[400px] object-cover' />
                     <Question id="type">
@@ -207,7 +215,7 @@ export default function DiscoveryForm({
                 </div>
                 <div className='flex flex-col items-center gap-8 w-full'>
                     <Image src="/discovery/frequency.jpg" alt="" width={1920} height={1080} className='w-full max-h-[400px] object-cover' />
-                    <Question id="frequency">
+                    <Question id="frequency" disabled={answers.type === undefined}>
                         <h2 className='text-2xl font-bold'>Quelle est votre fréquence de course ?</h2>
                         <p className='text-gray-500 mt-2'>Cette information nous aide à déterminer la durabilité nécessaire</p>
                         <div className='flex flex-col gap-2 mt-8'>
