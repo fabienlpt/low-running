@@ -35,6 +35,7 @@ export default function StoreLocator({onSelectStore}: StoreLocatorProps) {
     }, []);
 
     useEffect(() => {
+        console.log(selectedStore)
         if (selectedStore) {
             onSelectStore(selectedStore);
         }
@@ -48,7 +49,7 @@ export default function StoreLocator({onSelectStore}: StoreLocatorProps) {
                     {stores.map((store) => (
                         <div
                             key={store.id}
-                            className={`bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer ${selectedStore?.id === store.id ? "bg-gray-300" : ""}`}
+                            className={`p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer ${selectedStore?.id === store.id ? "bg-gray-300" : "bg-white "}`}
                             onClick={() => setSelectedStore(store)}
                         >
                             <h2 className="text-lg font-semibold text-gray-800 mb-2">{store.name}</h2>
