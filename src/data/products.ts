@@ -7,7 +7,7 @@ export const products: Product[] = [
     price: 8.33,  // 99.99/12
     sizes: ["38", "39", "40", "41"],
     material: "Maille",
-    colors: ["Rouge", "Noir"],
+    colors: ["Red", "Black"],
     features: ["Légère", "Respire"],
     maxKilometers: 500,
     images: ["/images/nike1.png"],
@@ -19,7 +19,7 @@ export const products: Product[] = [
     price: 10.83,  // 129.99/12
     sizes: ["39", "40", "41", "42"],
     material: "Synthétique",
-    colors: ["Bleu", "Blanc"],
+    colors: ["Blue", "White"],
     features: ["Amortissement", "Légère"],
     maxKilometers: 500,
     images: ["/images/nike2.png"],
@@ -31,7 +31,7 @@ export const products: Product[] = [
     price: 7.50,  // 89.99/12
     sizes: ["36", "37", "38", "39"],
     material: "Maille",
-    colors: ["Gris", "Rose"],
+    colors: ["Gray", "Pink"],
     features: ["Flexible"],
     maxKilometers: 500,
     images: ["/images/nike3.png"],
@@ -43,7 +43,7 @@ export const products: Product[] = [
     price: 12.50,  // 150.0/12
     sizes: ["38", "39", "40", "42"],
     material: "Maille",
-    colors: ["Noir", "Orange"],
+    colors: ["Black", "Orange"],
     features: ["Comfort", "Respire"],
     maxKilometers: 500,
     images: ["/images/nike4.png"],
@@ -55,7 +55,7 @@ export const products: Product[] = [
     price: 14.58,  // 175.0/12
     sizes: ["39", "40", "41"],
     material: "Synthétique",
-    colors: ["Vert"],
+    colors: ["Green"],
     features: ["Antidérapant"],
     maxKilometers: 500,
     images: ["/images/nike5.png"],
@@ -67,7 +67,7 @@ export const products: Product[] = [
     price: 13.33,  // 160.0/12
     sizes: ["38", "39"],
     material: "Textile",
-    colors: ["Rouge"],
+    colors: ["Red"],
     features: ["Ultra-light"],
     maxKilometers: 500,
     images: ["/images/nike6.jpg"],
@@ -79,7 +79,7 @@ export const products: Product[] = [
     price: 9.21,  // 110.5/12
     sizes: ["38", "39", "40"],
     material: "Cuir",
-    colors: ["Marron"],
+    colors: ["Brown"],
     features: ["Etanche"],
     maxKilometers: 500,
     images: ["/images/nike7.jpg"],
@@ -91,7 +91,7 @@ export const products: Product[] = [
     price: 11.67,  // 140.0/12
     sizes: ["40", "41"],
     material: "Synthétique",
-    colors: ["Gris"],
+    colors: ["Gray"],
     features: ["Absorption des chocs"],
     maxKilometers: 500,
     images: ["/images/nike8.png"],
@@ -115,7 +115,7 @@ export const products: Product[] = [
     price: 12.92,  // 155.0/12
     sizes: ["38", "39"],
     material: "Cuir",
-    colors: ["Vert"],
+    colors: ["Green"],
     features: ["Assistance supplémentaire"],
     maxKilometers: 500,
     images: ["/images/nike10.png"],
@@ -127,7 +127,7 @@ export const products: Product[] = [
     price: 7.08,  // 85.0/12
     sizes: ["37", "38", "39"],
     material: "Maille",
-    colors: ["Rose"],
+    colors: ["Pink"],
     features: ["Flexible"],
     maxKilometers: 500,
     images: ["/images/nike11.jpeg"],
@@ -139,7 +139,7 @@ export const products: Product[] = [
     price: 10.00,  // 120.0/12
     sizes: ["39", "40", "41"],
     material: "Cuir",
-    colors: ["Noir"],
+    colors: ["Black"],
     features: ["Stabilité"],
     maxKilometers: 500,
     images: ["/images/nike12.png"],
@@ -151,7 +151,7 @@ export const products: Product[] = [
     price: 7.50,  // 90.0/12
     sizes: ["36", "37", "38"],
     material: "Synthétique",
-    colors: ["Jaune"],
+    colors: ["Yellow"],
     features: ["Amortissement"],
     maxKilometers: 500,
     images: ["/images/nike13.png"],
@@ -163,7 +163,7 @@ export const products: Product[] = [
     price: 7.92,  // 95.0/12
     sizes: ["37", "38", "39"],
     material: "Textile",
-    colors: ["Rouge"],
+    colors: ["Red"],
     features: ["Flexible"],
     maxKilometers: 500,
     images: ["/images/nike14.jpeg"],
@@ -175,7 +175,7 @@ export const products: Product[] = [
     price: 8.58,  // 102.99/12
     sizes: ["40", "41", "42"],
     material: "Maille",
-    colors: ["Noir"],
+    colors: ["Black"],
     features: ["Antidérapant"],
     maxKilometers: 500,
     images: ["/images/nike15.png"],
@@ -187,7 +187,7 @@ export const products: Product[] = [
     price: 12.08,  // 145.0/12
     sizes: ["40", "41", "42"],
     material: "Textile",
-    colors: ["Bleu"],
+    colors: ["Blue"],
     features: ["Comfortable"],
     maxKilometers: 500,
     images: ["/images/nike16.png"],
@@ -199,7 +199,7 @@ export const products: Product[] = [
     price: 10.83,  // 130.0/12
     sizes: ["40", "41", "42"],
     material: "Synthétique",
-    colors: ["Marron"],
+    colors: ["Brown"],
     features: ["Durabilité"],
     maxKilometers: 500,
     images: ["/images/nike17.png"],
@@ -211,7 +211,7 @@ export const products: Product[] = [
     price: 8.25,  // 99.0/12
     sizes: ["40", "41"],
     material: "Maille",
-    colors: ["Bleu"],
+    colors: ["Blue"],
     features: ["Flexible"],
     maxKilometers: 500,
     images: ["/images/nike18.jpeg"],
@@ -223,7 +223,7 @@ export const products: Product[] = [
     price: 9.17,  // 109.99/12
     sizes: ["42", "43"],
     material: "Maille",
-    colors: ["Rouge"],
+    colors: ["Red"],
     features: ["Respire"],
     maxKilometers: 500,
     images: ["/images/nike19.png"],
@@ -235,7 +235,7 @@ export const products: Product[] = [
     price: 11.08,  // 133.0/12
     sizes: ["41", "42", "43"],
     material: "Synthétique",
-    colors: ["Gris"],
+    colors: ["Gray"],
     features: ["Résistant aux chocs"],
     maxKilometers: 500,
     images: ["/images/nike20.png"],
